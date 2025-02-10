@@ -8,7 +8,9 @@ function runOnStart(start, end) {
 
 eventEmitter.on("start", runOnStart);
 
-eventEmitter.emit("start", 1, 100);
+eventEmitter.once("start", () => console.log("Once Listener called!"));
+
+// console.log(eventEmitter.listenerCount("start"));
 
 console.log(eventEmitter.eventNames());
 
@@ -16,5 +18,19 @@ console.log(eventEmitter.eventNames());
 
 console.log(eventEmitter.getMaxListeners());
 
-eventEmitter.off("start", runOnStart);
+// console.log(eventEmitter.listenerCount("start"));
+
+eventEmitter.prependOnceListener("start", () => {
+    console.log("PrependOnceListener called!")
+})
+
+eventEmitter.prependListener("start", () => {
+    console.log("PrependListener called!")
+})
+
+eventEmitter.removeListener("start", runOnStart);
+
+eventEmitter.emit("start", 1, 100);
+
+eventEmitter.removeAllListeners("start");
 console.log(eventEmitter.listenerCount("start"));
