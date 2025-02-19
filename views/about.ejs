@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Aboutpage</title>
+  </head>
+  <body>
+    <%- include("navbar", {links: links}) %>
+    <h1>About page</h1>
+    <h2>Get details about users here..</h1>
+    <% users.forEach((user) => { %> 
+        <%- include("users/user", {user: user}); %>
+    <% }); %>
+    <%- include("footer", {pageName: "About page"}) %>
+  </body>
+</html>
