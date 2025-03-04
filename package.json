@@ -18,6 +18,7 @@
     "express-validator": "^7.2.1",
     "formidable": "^3.5.2",
     "nodemailer": "^6.10.0",
+    "pg": "^8.13.3",
     "upper-case": "^3.0.0"
   }
 }
