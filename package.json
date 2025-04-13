@@ -11,14 +11,18 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
+    "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "express-async-handler": "^1.2.0",
+    "express-session": "^1.18.1",
     "express-validator": "^7.2.1",
     "formidable": "^3.5.2",
     "nodemailer": "^6.10.0",
-    "pg": "^8.13.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.14.1",
     "upper-case": "^3.0.0"
   }
 }
